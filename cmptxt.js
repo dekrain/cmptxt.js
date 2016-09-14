@@ -1,3 +1,23 @@
+/**
+ * @fileoverview A simple text compressor
+ * Format:
+ * CT(bin-max-length)(times)(char)
+ * Example:
+ * *****-----_____aaabbcdfe
+ * VVVVVVVVVVVVVVVVVVVVVVVV
+ * CT\x015*5-5_3a2b1c1d1f1e
+ * Other Example:
+ * ***************-----
+ * VVVVVVVVVVVVVVVVVVVV
+ * CT\x0215*05-
+ *
+ * Ussage:
+ * node cmptxt.js <input-file> <output-file>
+ * node cmptxt.js <file> -
+ *
+ * when <output-file> is "-", then output writes to console
+ */
+
 var fs = require('fs');
 
 if (process.argv.length != 4) {
