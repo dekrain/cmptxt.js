@@ -26,7 +26,7 @@ if (process.argv.length != 4) {
 	process.exit(1);
 }
 
-var to_compress = fs.readFileSync(process.argv[2], {encoding: 'ASCII'});
+var to_compress = fs.readFileSync(process.argv[2], {encoding: 'UTF-8'});
 
 var i = 0, mi = 0, ch;
 var compressed = [];
