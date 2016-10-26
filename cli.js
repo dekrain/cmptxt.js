@@ -19,7 +19,9 @@ var messages = {
 }
 var msg, task = process.argv[2];
 
-var {data: compressed, average} = task === 'cmp' ? cmptxt(to_compress) : task === 'decmp' ? cmptxt.decompress(to_compress) : {};
+var compressed, average, result = task === 'cmp' ? cmptxt(to_compress) : task === 'decmp' ? cmptxt.decompress(to_compress) : {};
+compressed = result.data;
+average = result.average;
 
 if (task === 'cmp') {
 	if (average < 1) {
