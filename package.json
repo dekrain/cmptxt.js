@@ -1,0 +1,9 @@
+{
+	"name": "cmptxt.js",
+	"description": "A simple text compresser",
+	"author": "DeKrain",
+	"main": "./cmptxt.js",
+	"bin": {
+		"cmptxt": "./cli.js"
+	}
+}
